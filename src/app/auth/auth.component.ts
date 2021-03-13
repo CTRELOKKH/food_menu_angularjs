@@ -12,6 +12,7 @@ import { AuthResponseData, AuthService } from './auth.service';
 export class AuthComponent implements OnInit {
   isLoginMode = true
   error: string = null
+  
   constructor(private authService: AuthService, private router:Router) { }
 
   ngOnInit(): void {
