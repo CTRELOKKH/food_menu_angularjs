@@ -1,0 +1,15 @@
+<div class="card border-light mb-3" style="max-width: 18rem;">
+    <a style="cursor: pointer;"
+    [routerLink]="[index]"
+    routerLinkActive="active1">
+        <div class="card-header">{{recipe.name}}</div>
+        <div class="card-body">
+            <div class="float-md-left">
+                <p class="card-text">{{recipe.description}}</p>
+            </div>
+            <div class="float-md-right">
+                <img src="{{ recipe.imagePath }}" alt="{{recipe.name}}" class="img-responsive" style="max-height: 50px">
+            </div>      
+        </div>      
+    </a>
+</div>
