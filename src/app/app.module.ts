@@ -28,7 +28,7 @@ import { CoreModule } from './core.module';
     RecipesModule,
     ShoppingModule,
     CoreModule
-  ],git
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
