@@ -10,19 +10,25 @@ import { AlertComponent } from './shared/alert/alert.component';
 import { ShoppingModule } from './shopping-list/shopping.module';
 import { CoreModule } from './core.module';
 import { AuthModule } from './auth/auth.module';
-import { shoppingListReduer } from './shopping-list/store/shopping-list.reducer';
+import * as fromApp from './store/app.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './auth/store/auth.effects';
+import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AlertComponent
+    AlertComponent,
+    PlaceholderDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({shoppingList: shoppingListReduer}),
+    StoreModule.forRoot(fromApp.appReducer),
+    EffectsModule.forRoot([AuthEffects]),
     AuthModule,
     CoreModule,
     ShoppingModule

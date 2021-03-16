@@ -30,7 +30,6 @@
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
-              
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -128,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "foodmenu"
+    }
+  },
+  "defaultProject": "foodmenu",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
